@@ -1,0 +1,83 @@
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body { background-color: #f4f7f9; }
+
+.container { width: 90%; max-width: 1200px; margin: auto; }
+
+/* Navbar */
+header { background: white; padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+.navbar { display: flex; justify-content: space-between; align-items: center; }
+.logo { display: flex; align-items: center; gap: 10px; }
+.logo img { height: 50px; }
+.logo-text h1 { font-size: 16px; color: #0d47a1; line-height: 1.2; font-weight: 800; }
+.logo-text p { font-size: 10px; color: #666; }
+
+nav { display: flex; align-items: center; gap: 30px; }
+nav ul { display: flex; list-style: none; gap: 20px; }
+nav ul li a { text-decoration: none; color: #333; font-weight: 600; font-size: 14px; }
+nav ul li a.active { color: #0d47a1; border-bottom: 3px solid #0d47a1; padding-bottom: 5px; }
+
+.btn-ppdb {
+    background: #1565c0; color: white; padding: 10px 20px;
+    border-radius: 5px; text-decoration: none; font-size: 13px;
+    font-weight: bold; display: flex; align-items: center; gap: 8px;
+}
+
+/* Hero Section - Perbaikan Utama */
+.hero {
+    position: relative;
+    /* Pastikan file 'hero-sekolah.jpg' ada di folder yang sama */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/hero-sekolah.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.hero-content h1 { font-size: 38px; margin: 20px 0; line-height: 1.1; font-weight: 800; }
+.badge { background: #1976d2; padding: 5px 15px; border-radius: 4px; font-size: 14px; }
+.btn-primary {
+    background: #d4a017; color: white; padding: 12px 25px;
+    text-decoration: none; border-radius: 5px; font-weight: bold;
+}
+
+/* Info Cards */
+.info-sekolah { padding: 50px 0; }
+.grid-info { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card { 
+    background: white; padding: 25px; border-radius: 15px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+}
+.card-header { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+.card-header i { background: #e3f2fd; color: #1976d2; padding: 12px; border-radius: 8px; }
+
+.news-item { display: flex; gap: 15px; margin-bottom: 15px; }
+.news-item img { width: 80px; height: 55px; border-radius: 5px; object-fit: cover; }
+.news-item p { font-size: 13px; font-weight: 700; color: #333; }
+
+.sambutan-content img { width: 80px; height: 110px; border-radius: 5px; object-fit: cover; }
+
+/* Footer */
+footer { background: #0a1929; color: white; padding: 60px 0 20px; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.5fr; gap: 40px; }
+.logo-footer { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+.logo-footer img { height: 40px; }
+.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; }
+.gallery-grid img { width: 100%; border-radius: 3px; aspect-ratio: 1/1; object-fit: cover; }
+
+.social-icons { display: flex; gap: 10px; margin-bottom: 15px; }
+.social-icons a { 
+    color: white; width: 35px; height: 35px; 
+    display: flex; align-items: center; justify-content: center; border-radius: 5px; 
+}
+
+.copyright { 
+    text-align: center; margin-top: 50px; padding-top: 20px; 
+    border-top: 1px solid rgba(255,255,255,0.1); font-size: 12px; color: #94a3b8; 
+}

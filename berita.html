@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita - SD NEGERI 09 BELIDA DARAT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* --- CSS INTERNAL (Tema Biru Navy & Emas) --- */
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body { background-color: #f4f7f9; color: #333; }
+        .container { width: 90%; max-width: 1200px; margin: auto; }
+
+        /* Header & Navigasi */
+        header {
+            background: white; padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .navbar { display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 10px; }
+        .logo img { height: 50px; }
+        .logo-text h1 { font-size: 16px; color: #0d47a1; line-height: 1.2; font-weight: 800; }
+        
+        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav ul li a { text-decoration: none; color: #333; font-weight: 600; font-size: 14px; transition: 0.3s; }
+        nav ul li a.active { color: #0d47a1; border-bottom: 3px solid #0d47a1; padding-bottom: 5px; }
+
+        .btn-ppdb {
+    background: #1565c0; /* Warna biru sesuai tema */
+    color: white !important; /* Warna teks putih */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+        /* Hero Berita */
+        .hero-berita {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/hero-sekolah.jpg');
+            background-size: cover; background-position: center;
+            height: 250px; display: flex; align-items: center; justify-content: center; color: white;
+        }
+        .hero-berita h1 { 
+            font-size: 40px; font-weight: 800; text-transform: uppercase; 
+            border-bottom: 4px solid #d4a017; padding-bottom: 10px; 
+        }
+
+        /* News Section */
+        .news-section { padding: 60px 0; }
+        .news-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+            gap: 30px; 
+        }
+
+        /* News Card */
+        .news-card {
+            background: white; border-radius: 15px; overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: 0.3s; display: flex; flex-direction: column;
+            border-bottom: 4px solid transparent;
+        }
+        .news-card:hover { transform: translateY(-10px); border-bottom: 4px solid #d4a017; }
+        
+        .news-img { height: 200px; position: relative; overflow: hidden; }
+        .news-img img { width: 100%; height: 100%; object-fit: cover; }
+        .news-date {
+            position: absolute; top: 15px; left: 15px;
+            background: #0d47a1; color: white; padding: 5px 15px;
+            border-radius: 20px; font-size: 12px; font-weight: bold;
+        }
+
+        .news-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+        .news-category { color: #d4a017; font-size: 12px; font-weight: bold; text-transform: uppercase; margin-bottom: 10px; display: block; }
+        .news-title { font-size: 20px; color: #0d47a1; margin-bottom: 15px; font-weight: 700; line-height: 1.4; text-decoration: none; }
+        .news-excerpt { font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 20px; }
+        
+        .btn-read-more {
+            margin-top: auto; color: #0d47a1; text-decoration: none;
+            font-weight: bold; font-size: 14px; display: flex; align-items: center; gap: 5px; transition: 0.3s;
+        }
+        .btn-read-more:hover { gap: 10px; color: #d4a017; }
+
+        /* Footer */
+        footer { background: #0d2137; color: white; padding: 40px 0; text-align: center; margin-top: 50px; }
+        .copyright { font-size: 13px; color: #94a3b8; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container navbar">
+            <div class="logo">
+                <img src="images/logo 09.jpg" alt="Logo">
+                <div class="logo-text">
+                    <h1>SD NEGERI 09 <br> BELIDA DARAT</h1>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="profil.html">Profil</a></li>
+                    <li><a href="galeri.html">Galeri</a></li>
+                    <li><a href="berita.html" class="active">Berita</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+                <a href="#" class="btn-ppdb">PPDB ONLINE</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-berita">
+        <div class="container">
+            <h1>Berita Sekolah</h1>
+        </div>
+    </section>
+
+    <section class="news-section">
+        <div class="container">
+            <div class="news-grid">
+                
+                <article class="news-card">
+                    <div class="news-img">
+                        <span class="news-date">05 Mei 2024</span>
+                        <img src="images/hero-sekolah.jpg" alt="Berita 1">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">Kegiatan</span>
+                        <a href="#" class="news-title">Pelepasan Siswa Kelas VI Tahun Ajaran 2023/2024</a>
+                        <p class="news-excerpt">Acara perpisahan berlangsung khidmat dan penuh haru dihadiri oleh seluruh wali murid...</p>
+                        <a href="#" class="btn-read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-img">
+                        <span class="news-date">28 Apr 2024</span>
+                        <img src="images/hero-sekolah.jpg" alt="Berita 2">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">Prestasi</span>
+                        <a href="#" class="news-title">Juara Umum Lomba Pramuka Tingkat Kecamatan</a>
+                        <p class="news-excerpt">Regu Pramuka SD Negeri 09 Belida Darat berhasil membawa pulang piala bergilir...</p>
+                        <a href="#" class="btn-read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-img">
+                        <span class="news-date">10 Apr 2024</span>
+                        <img src="images/hero-sekolah.jpg" alt="Berita 3">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">Pengumuman</span>
+                        <a href="#" class="news-title">Informasi Jadwal Libur Lebaran Idul Fitri</a>
+                        <p class="news-excerpt">Sesuai dengan kalender pendidikan, kegiatan belajar mengajar akan diliburkan mulai tanggal...</p>
+                        <a href="#" class="btn-read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p style="font-weight: bold; margin-bottom: 10px;">SD NEGERI 09 BELIDA DARAT</p>
+            <p class="copyright">© 2026 All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
