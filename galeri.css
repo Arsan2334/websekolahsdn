@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+}
+
+/* Navbar Rapi */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #555;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+.menu a.active {
+    color: #3498db;
+}
+
+/* Hero Section */
+.hero-small {
+    background: #4a4a4a;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-small h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Container Galeri - Kunci agar ke samping */
+.galeri-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Membagi kolom otomatis */
+    gap: 20px;
+}
+
+/* Item Kotak Foto */
+.galeri-item {
+    position: relative;
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background-color: #ddd;
+}
+
+.galeri-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Agar gambar tidak gepeng */
+    transition: 0.5s;
+}
+
+.galeri-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Overlay Biru saat di-hover */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(52, 152, 219, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.galeri-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay span {
+    font-weight: 600;
+    font-size: 1.2rem;
+    border: 2px solid white;
+    padding: 5px 15px;
+}
